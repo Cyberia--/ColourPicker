@@ -53,9 +53,6 @@ class HSVColourWheel extends JPanel{
 		this.repaint();
 	}
 	
-	// originally circle_radius
-	float circrad = 0f;
-	
 	/**
 	 * Draw a standard HSV color wheel
 	 * https://en.wikipedia.org/wiki/HSL_and_HSV#/media/File:Hsl-hsv-colorpickers.svg
@@ -90,12 +87,8 @@ class HSVColourWheel extends JPanel{
 					// (vectDist/j-i)
 					
 					// set the colour and saturation
-					g.setColor(Color.getHSBColor(color, (vectDist/j-i), 1));
-					
-					circrad += 0.0000001f;
-					
-//					System.out.println(circrad);
-					
+					g.setColor(Color.getHSBColor(color, (vectDist/circle_radius), 1));
+										
 					// draw the point with it's new colour value
 					drawPoint(g, pointInSquare.x, pointInSquare.y);
 				}

@@ -12,7 +12,7 @@ public class ColourPalette extends JFrame {
 		ColourPalette art = new ColourPalette();
 		art.setTitle("HSV ColourWheel");
 		art.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		art.setSize(800, 800);
+		art.setSize(650, 670);
 
 		HSVColourWheel artPanel = new HSVColourWheel();
 		art.add(artPanel);
